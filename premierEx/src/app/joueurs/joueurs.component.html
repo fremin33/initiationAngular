@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>{{ title | uppercase}}</h2>
+  <div class="row">
+    <div *ngFor="let joueur of lesJoueurs" class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" src="../../assets/joueurs/{{joueur.images}}" alt="image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{ joueur.nom }} {{ joueur.prenom}}</h4>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary" (click)="select(joueur);"> Détail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-detail-joueur *ngIf="joueurSelectionne"
+                   [monJoueur]="joueurSelectionne"></app-detail-joueur>
