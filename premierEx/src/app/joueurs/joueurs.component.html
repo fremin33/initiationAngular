@@ -7,12 +7,12 @@
         <div class="card-body">
           <h4 class="card-title">{{ joueur.nom }} {{ joueur.prenom}}</h4>
           <p class="card-text"></p>
-          <a href="#" class="btn btn-primary" (click)="select(joueur);"> Détail</a>
+          <a routerLink="/detail/{{joueur.id}}" class="btn btn-primary"> Détail</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<app-detail-joueur *ngIf="joueurSelectionne"
-                   [monJoueur]="joueurSelectionne"></app-detail-joueur>
+<!--<app-detail-joueur *ngIf="joueurSelectionne"-->
+<!--[monJoueur]="joueurSelectionne"></app-detail-joueur>-->

@@ -9,11 +9,12 @@
           <p class="card-text"> Poste : {{ monJoueur.post}}</p>
           <p class="card-text"> Nombre de matches : {{ monJoueur.nbMatches}}</p>
           <p class="card-text"> Points Marqués : {{ monJoueur.pointsMarques}}</p>
+          <button (click)="goBack()">Back</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<app-detail-joueur *ngIf="joueurSelectionne"
-                   [monJoueur]="joueurSelectionne"></app-detail-joueur>
+<!--<app-detail-joueur *ngIf="joueurSelectionne"-->
+                   <!--[monJoueur]="joueurSelectionne"></app-detail-joueur>-->
