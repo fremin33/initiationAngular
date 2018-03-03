@@ -14,7 +14,7 @@ export class JoueursComponent implements OnInit {
     deuxJoueur: Joueur;
     troisJoeur: Joueur;
     // Déclaration
-    lesJoueurs: Array<Joueur>;
+    lesJoueurs: Observable<Joueur>;
     joueurSelectionne: Joueur;
 
     constructor(private JoueurService: JoueursService) {
@@ -23,7 +23,7 @@ export class JoueursComponent implements OnInit {
 
     ngOnInit() {
         // Allocation
-        this.lesJoueurs = [];
+        // this.lesJoueurs = [];
         this.getJoueurs();
         // this.unJoueur = new Joueur(1, "botia", "Levani", "1.jpg", '3ieme ligne', 83, 90);
         // this.deuxJoueur = new Joueur(2, "gourdon", "kevin", "2.jpg", "3ieme ligne", 135, 90);
@@ -42,7 +42,8 @@ export class JoueursComponent implements OnInit {
         //     this.lesJoueurs = this.JoueurService.getJoueurs();
 
         //Asynchrone
-        this.JoueurService.getJoueurs().subscribe(joueur => this.lesJoueurs = joueur);
+        // this.JoueurService.getJoueurs().subscribe(joueur => this.lesJoueurs = joueur);
+        this.lesJoueurs = this.JoueurService.getJoueurs();
     }
 
 

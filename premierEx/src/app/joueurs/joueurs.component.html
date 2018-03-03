@@ -1,8 +1,8 @@
 <div class="container">
   <h2>{{ title | uppercase}}</h2>
   <div class="row">
-    <div *ngFor="let joueur of lesJoueurs" class="col-sm-4">
-      <div class="card">
+    <div *ngFor="let joueur of lesJoueurs | async" class="col-sm-4">
+      <div class="card" appShowCard>
         <img class="card-img-top" src="../../assets/joueurs/{{joueur.images}}" alt="image" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">{{ joueur.nom }} {{ joueur.prenom}}</h4>

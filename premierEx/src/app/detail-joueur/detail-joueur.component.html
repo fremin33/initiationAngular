@@ -1,20 +1,21 @@
 <div class="container">
-  <h2>{{ title }}</h2>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="card">
-        <img class="card-img-top" src="../../assets/joueurs/{{monJoueur.images}}" alt="image" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">{{ monJoueur.nom | uppercase}} {{ monJoueur.prenom}}</h4>
-          <p class="card-text"> Poste : {{ monJoueur.post}}</p>
-          <p class="card-text"> Nombre de matches : {{ monJoueur.nbMatches}}</p>
-          <p class="card-text"> Points Marqués : {{ monJoueur.pointsMarques}}</p>
-          <button (click)="goBack()">Back</button>
+    <h2>{{ title }}</h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <img class="card-img-top" src="../../assets/joueurs/{{monJoueur.images}}" alt="image"
+                     style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">{{ monJoueur.nom | uppercase}} {{ monJoueur.prenom}}</h4>
+                    <p class="card-text"> Poste : {{ monJoueur.post}}</p>
+                    <p class="card-text"> Nombre de matches : {{ monJoueur.nbMatches}}</p>
+                    <p class="card-text"> Points Marqués : {{ monJoueur.pointsMarques}}</p>
+                    <p class="card-text"> Blessé : <i class="{{ monJoueur.blesse | medic }}"></i></p>
+                    <button (click)="goBack()">Back</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <!--<app-detail-joueur *ngIf="joueurSelectionne"-->
-                   <!--[monJoueur]="joueurSelectionne"></app-detail-joueur>-->
+<!--[monJoueur]="joueurSelectionne"></app-detail-joueur>-->
