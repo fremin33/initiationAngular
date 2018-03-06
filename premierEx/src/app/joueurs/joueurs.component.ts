@@ -14,7 +14,7 @@ export class JoueursComponent implements OnInit {
     deuxJoueur: Joueur;
     troisJoeur: Joueur;
     // Déclaration
-    lesJoueurs: Observable<Joueur>;
+    lesJoueurs: Observable<Joueur[]>;
     joueurSelectionne: Joueur;
 
     constructor(private JoueurService: JoueursService) {
@@ -43,7 +43,7 @@ export class JoueursComponent implements OnInit {
 
         //Asynchrone
         // this.JoueurService.getJoueurs().subscribe(joueur => this.lesJoueurs = joueur);
-        this.lesJoueurs = this.JoueurService.getJoueurs();
+        this.lesJoueurs = this.JoueurService.getJoueursDb();
     }
 
 
